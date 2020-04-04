@@ -5,7 +5,7 @@ const blynk = new Blynk.Blynk(
     (options = {
         connector: new Blynk.TcpClient(
             (options = { addr: '192.168.1.37', port: 8080 })
-        ) // This takes all the info and directs the connection to you Local Server.
+        ), // This takes all the info and directs the connection to you Local Server.
     })
 )
 
@@ -21,47 +21,47 @@ var v7 = new blynk.VirtualPin(7)
 var v8 = new blynk.VirtualPin(8)
 var v9 = new blynk.VirtualPin(9)
 
-v1.on('write', function(param) {
+v1.on('write', function (param) {
     myCache[name][0] = param[0]
     console.log(myCache)
 })
 
-v2.on('write', function(param) {
+v2.on('write', function (param) {
     myCache[name][1] = param[0]
     console.log(myCache)
 })
 
-v3.on('write', function(param) {
+v3.on('write', function (param) {
     myCache[name][2] = param[0]
     console.log(myCache)
 })
 
-v4.on('write', function(param) {
+v4.on('write', function (param) {
     myCache[name][3] = param[0]
     console.log(myCache)
 })
 
-v5.on('write', function(param) {
+v5.on('write', function (param) {
     myCache[name][4] = param[0]
     console.log(myCache)
 })
 
-v6.on('write', function(param) {
+v6.on('write', function (param) {
     myCache[name][5] = param[0]
     console.log(myCache)
 })
 
-v7.on('write', function(param) {
+v7.on('write', function (param) {
     myCache[name][6] = param[0]
     console.log(myCache)
 })
 
-v8.on('write', function(param) {
+v8.on('write', function (param) {
     myCache[name][7] = param[0]
     console.log(myCache)
 })
 
-v9.on('write', function(param) {
+v9.on('write', function (param) {
     myCache[name][8] = param[0]
     console.log(myCache)
 })
@@ -113,7 +113,7 @@ server.on('message', (message, remote) => {
         console.log(myCache)
         writeToBlynk(vPins)
     }
-    server.send(myCache[name].join(), remote.port, remote.address, err => {
+    server.send(myCache[name].join(''), remote.port, remote.address, (err) => {
         if (err) {
             server.close()
         } else {
