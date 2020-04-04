@@ -67,25 +67,25 @@ v9.on('write', function(param) {
 })
 
 function writeToBlynk(vPins) {
-    vPins.forEach((i, pin) => {
-        if (i == 0) {
-            v1.write(pin)
-        } else if (i == 1) {
-            v2.write(pin)
-        } else if (i == 2) {
-            v3.write(pin)
-        } else if (i == 3) {
-            v4.write(pin)
-        } else if (i == 4) {
-            v5.write(pin)
-        } else if (i == 5) {
-            v6.write(pin)
-        } else if (i == 6) {
-            v7.write(pin)
-        } else if (i == 7) {
-            v8.write(pin)
-        } else if (i == 8) {
-            v9.write(pin)
+    vPins.forEach((value, pin) => {
+        if (pin == 0) {
+            v1.write(value)
+        } else if (pin == 1) {
+            v2.write(value)
+        } else if (pin == 2) {
+            v3.write(value)
+        } else if (pin == 3) {
+            v4.write(value)
+        } else if (pin == 4) {
+            v5.write(value)
+        } else if (pin == 5) {
+            v6.write(value)
+        } else if (pin == 6) {
+            v7.write(value)
+        } else if (pin == 7) {
+            v8.write(value)
+        } else if (pin == 8) {
+            v9.write(value)
         }
     })
 }

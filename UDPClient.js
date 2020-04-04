@@ -1,5 +1,5 @@
 var PORT = 33333
-var HOST = '127.0.0.1'
+var HOST = '34.87.33.176'
 
 var dgram = require('dgram')
 // var message = new Buffer.from('ACK:000000000')
